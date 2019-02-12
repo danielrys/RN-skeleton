@@ -1,0 +1,168 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button component renders with custom styles 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "red",
+      "borderRadius": 10,
+      "height": 84,
+      "justifyContent": "center",
+      "opacity": 1,
+    }
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "fontSize": 16,
+        },
+        Array [
+          Object {
+            "color": "#ffffff",
+          },
+          Object {
+            "color": "yellow",
+            "fontSize": 12,
+          },
+        ],
+      ]
+    }
+  >
+    Button with custom styles
+  </Text>
+</View>
+`;
+
+exports[`Button component renders with default props 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "rgb(24,202,167)",
+      "borderRadius": 10,
+      "height": 84,
+      "justifyContent": "center",
+      "opacity": 1,
+    }
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "fontSize": 16,
+        },
+        Array [
+          Object {
+            "color": "#ffffff",
+          },
+          Object {},
+        ],
+      ]
+    }
+  >
+    Default primary theme
+  </Text>
+</View>
+`;
+
+exports[`Button component renders with disabled theme 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "rgb(155,155,155)",
+      "borderRadius": 10,
+      "height": 84,
+      "justifyContent": "center",
+      "opacity": 1,
+    }
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "fontSize": 16,
+        },
+        Array [
+          Object {
+            "color": "rgb(105,105,105)",
+          },
+          Object {},
+        ],
+      ]
+    }
+  >
+    Disabled theme
+  </Text>
+</View>
+`;
+
+exports[`Button component renders with secondary theme 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "rgb(01,23,45)",
+      "borderRadius": 10,
+      "height": 84,
+      "justifyContent": "center",
+      "opacity": 1,
+    }
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "fontSize": 16,
+        },
+        Array [
+          Object {
+            "color": "#ffffff",
+          },
+          Object {},
+        ],
+      ]
+    }
+  >
+    Secondary theme
+  </Text>
+</View>
+`;

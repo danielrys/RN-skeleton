@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text component renders as bold 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "fontSize": 16,
+      },
+      Object {},
+    ]
+  }
+>
+  Default bold text
+</Text>
+`;
+
+exports[`Text component renders with custom styles 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "fontSize": 16,
+      },
+      Object {
+        "color": "red",
+        "fontSize": 12,
+      },
+    ]
+  }
+>
+  Text with custom style
+</Text>
+`;
+
+exports[`Text component renders with default props 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "fontSize": 16,
+      },
+      Object {},
+    ]
+  }
+>
+  Default text
+</Text>
+`;
+
+exports[`Text component renders with specified color and size 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "yellow",
+        "fontSize": 20,
+      },
+      Object {},
+    ]
+  }
+>
+  Text with defined size and color
+</Text>
+`;
