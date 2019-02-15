@@ -40,7 +40,7 @@ const styles = {
   },
 }
 
-export default class Detail extends React.Component<ContainerProps> {
+export default class Container extends React.Component<ContainerProps> {
   static defaultProps = {
     stretched: false,
     style: {},
