@@ -1,6 +1,7 @@
 // @flow
-import React, { Component } from "react"
+import * as React from "react"
 import { NetInfo } from "react-native"
+import hoistNonReactStatics from "hoist-non-react-statics"
 
 export type NetInfoProps = {
   isConnected: boolean,
@@ -9,14 +10,14 @@ export type NetInfoProps = {
   },
 }
 
-const withNetInfo = WrappedComponent => {
-  return class extends Component {
+const withNetInfo = (WrappedComponent: React.AbstractComponent<*, *>) => {
+  const AlteredComponent = class extends React.Component<*, *> {
     state = {
       connectionInfo: {},
       isConnected: false,
     }
 
-    constructor(props) {
+    constructor(props: any) {
       super(props)
       NetInfo.getConnectionInfo().then(this.handleChange)
       NetInfo.isConnected.fetch().then(this.handleInfoChange)
@@ -38,11 +39,11 @@ const withNetInfo = WrappedComponent => {
       )
     }
 
-    handleChange = isConnected => {
+    handleChange = (isConnected: boolean) => {
       this.setState({ isConnected })
     }
 
-    handleInfoChange = connectionInfo => {
+    handleInfoChange = (connectionInfo: any) => {
       this.setState({ connectionInfo })
     }
 
@@ -57,6 +58,9 @@ const withNetInfo = WrappedComponent => {
       )
     }
   }
+
+  hoistNonReactStatics(AlteredComponent, WrappedComponent)
+  return AlteredComponent
 }
 
 export default withNetInfo

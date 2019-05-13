@@ -3,6 +3,7 @@ import "rxjs"
 import React from "react"
 // eslint-disable-next-line
 import { Provider } from "react-redux"
+// $FlowFixMe
 import { PersistGate } from "redux-persist/integration/react"
 
 // initialization

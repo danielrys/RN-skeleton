@@ -3,6 +3,7 @@ import * as React from "react"
 import { View } from "react-native"
 
 // external libs
+// $FlowFixMe
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view"
 
 // components
@@ -49,7 +50,7 @@ export default class Detail extends React.Component<ScrollableContainerProps> {
 
     return (
       <View
-        style={[renderStyle(styles.wrapperStyle, { centerContent }, style)]}
+        style={[renderStyle(styles.wrapperStyle, { centerContent }), style]}
       >
         {loading ? (
           <Container loading />
@@ -57,8 +58,10 @@ export default class Detail extends React.Component<ScrollableContainerProps> {
           <KeyboardAwareScrollView
             keyboardShouldPersistTaps="handled"
             enableOnAndroid
+            showsVerticalScrollIndicator={false}
             contentContainerStyle={[
-              renderStyle(styles.contentStyle, { centerContent }, contentStyle),
+              [renderStyle(styles.contentStyle, { centerContent })],
+              contentStyle,
             ]}
           >
             {children}

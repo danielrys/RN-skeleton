@@ -10,8 +10,9 @@ import { Colors, Metrics } from "../themes"
 import renderStyle from "../utils/renderStyle"
 
 export type ContainerProps = {
-  children: React.Node,
+  children?: React.Node,
   style?: ViewType,
+  theme?: string,
   stretched?: boolean,
   loading: boolean,
 }
@@ -20,7 +21,7 @@ const styles = {
   outerWrapper: {
     flex: 1,
   },
-  container: ({ stretched }) => {
+  container: ({ stretched, theme }) => {
     const spacings = stretched
       ? { paddingHorizontal: 0, paddingTop: 0 }
       : {
@@ -28,7 +29,7 @@ const styles = {
           paddingTop: Metrics.spacings.medium,
         }
     return {
-      backgroundColor: Colors.background,
+      backgroundColor: theme,
       flex: 1,
       ...spacings,
     }
@@ -43,15 +44,19 @@ const styles = {
 export default class Container extends React.Component<ContainerProps> {
   static defaultProps = {
     stretched: false,
+    theme: Colors.background,
     style: {},
+    children: null,
   }
 
   render() {
-    const { children, stretched, style, loading } = this.props
+    const { children, stretched, style, theme, loading } = this.props
 
     return (
       <SafeAreaView style={styles.outerWrapper}>
-        <View style={[renderStyle(styles.container, { stretched }), style]}>
+        <View
+          style={[renderStyle(styles.container, { stretched, theme }), style]}
+        >
           {loading ? (
             <View style={styles.spinner}>
               <ActivityIndicator size="large" color={Colors.primary} />

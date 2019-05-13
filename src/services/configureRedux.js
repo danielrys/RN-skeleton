@@ -29,14 +29,18 @@ const reducers = {
 }
 
 export default () => {
-  const logger = createLogger({ collapsed: true })
   const middleware = []
 
   const epicMiddleware = createEpicMiddleware({
     dependencies: {},
   })
+
+  if (__DEV__) {
+    const logger = createLogger({ collapsed: true })
+    middleware.push(logger)
+  }
+
   middleware.push(epicMiddleware)
-  middleware.push(logger)
   middleware.push(navMiddleware)
 
   const persistedReducer = persistReducer(
